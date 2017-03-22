@@ -105,6 +105,7 @@ static inline void uloop_end(void)
 }
 
 int uloop_init(void);
+void uloop_disable_signals(void);
 int uloop_run(void);
 void uloop_done(void);
 

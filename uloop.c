@@ -520,6 +520,11 @@ bool uloop_cancelling(void)
 	return uloop_run_depth > 0 && uloop_cancelled;
 }
 
+void uloop_disable_signals(void)
+{
+        uloop_run_depth = 1;
+}
+
 int uloop_run(void)
 {
 	struct timeval tv;
